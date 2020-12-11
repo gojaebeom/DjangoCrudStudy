@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h1>게시물 생성하기</h1>  
+    <form action="/posts/store" method="post">
+        {% csrf_token %}
+        <input type="text" name="title">
+        <input type="text" name="content">
+        <button>생성</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h1>게시물 상세페이지</h1>  
+    <div>{{post.title}}</div>
+    <div>{{post.content}}</div>
+
+    <a href="/posts/{{post.id}}/update">게시물 수정하기</a>
+    <a href="/posts/{{post.id}}/destroy">게시물 삭제하기</a>
+{% endblock %}

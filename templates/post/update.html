@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h1>게시물 수정하기</h1>  
+    <form action="/posts/{{ post.id }}/edit" method="post">
+        {% csrf_token %}
+        <input type="text" name="title" value="{{post.title}}">
+        <input type="text" name="content" value="{{post.content}}">
+        <button>수정</button>
+    </form>
+{% endblock %}
